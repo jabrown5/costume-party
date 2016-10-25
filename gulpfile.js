@@ -53,11 +53,9 @@ gulp.task('db_drop_tables', function() {
 
 gulp.task('db_select_all_parties', function() {
 	console.log('Selecting all tables in DB...')
-  //callback(response)
   function selectPartyCallback(response) {
   	console.log(response);
   }
-  //db.raw(query).then(callback)
   db.raw(SQL_TABLE_SELECT_ALL_PARTIES).then(selectPartyCallback);
 });
 
